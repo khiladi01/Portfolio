@@ -11,14 +11,14 @@ function Nav() {
   };
 
   return (
-    <nav className="h-[100px] bg-white flex justify-between items-center px-6 md:px-10 select-none relative shadow-sm">
+    <nav className="h-32 bg-white flex justify-between items-center px-6 md:px-10 select-none relative shadow-sm">
       
       {/* Logo */}
       <div className="flex items-center">
         <img
           src={Icon}
           alt="logo"
-          className="h-[32px] w-[35px] rounded-xl transition-opacity duration-200 hover:opacity-80"
+          className="h-32 w-35 rounded-xl transition-opacity duration-200 hover:opacity-80"
         />
       </div>
 
@@ -57,7 +57,7 @@ function Nav() {
         </Link>
 
         <a
-          href="/Resume/Raushan_9142158588.pdf"
+          href="/Resume/Raushan_Raj_9142158588.pdf"
           download="Raushan_Raj_Resume.pdf"
           className="text-black hover:text-gray-600 transition-colors duration-200"
         >
@@ -67,7 +67,7 @@ function Nav() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-[100px] left-0 w-full bg-white transition-all duration-200 ease-in-out transform ${
+        className={`md:hidden fixed top-32 left-0 w-full bg-white transition-all duration-200 ease-in-out transform ${
           isMenuOpen
             ? "translate-y-0 opacity-100 visible"
             : "-translate-y-full opacity-0 invisible"
@@ -83,7 +83,7 @@ function Nav() {
           </Link>
 
           <a
-            href="/Resume/Raushan_9142158588.pdf"
+            href="/public/Resume/Raushan_Raj_9142158588.pdf"
             download="Raushan_Raj_Resume.pdf"
             onClick={() => setIsMenuOpen(false)}
             className="text-black hover:text-gray-600 transition-colors duration-200 uppercase font-medium tracking-wide w-full text-center py-2"

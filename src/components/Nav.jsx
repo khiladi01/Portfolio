@@ -1,97 +1,84 @@
-import "../style/Edit.css"
-import Icon from "../assets/favicon/Icon.png"
+import "../style/Edit.css";
+import Icon from "../assets/favicon/Icon.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Nav () {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    return (
-        <>
-        <nav id="navigation" className="h-[100px] bg-transparent flex justify-between items-center p-5 select-none relative">
-            <div className="flex items-center gap-4">
-                <div id="icon" className="rounded-2xl">
-                    <img src={Icon} alt="image" className="h-[32px] w-[35px] border-[2px] border-[#212121] rounded-2xl" />
-                </div>
-                <div id="navname" className="text-[25px] font-semibold uppercase tracking-[0.25em] md:pr-[850px]">
-                    <p className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">portfolio</p>
-                </div>
-            </div>
-
-            {/* Hamburger Menu Button */}
-            <button 
-                onClick={toggleMenu}
-                className="md:hidden text-white p-2 focus:outline-none z-50 relative hover:scale-110 transition-transform duration-200"
-                aria-label="Toggle menu"
-            >
-                <div className="w-6 h-5 flex flex-col justify-between">
-                    <span className={`w-full h-0.5 bg-white transform transition-all duration-200 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                    <span className={`w-full h-0.5 bg-white transition-all duration-200 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                    <span className={`w-full h-0.5 bg-white transform transition-all duration-200 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-                </div>
-            </button>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex text-md font-semibold tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase gap-10">
-                <Link className="hover:text-[#00FFF0] hover:underline hover:underline-offset-8 decoration-gray-200 transition-all ease-in-out duration-200" to="/project">Projects</Link>
-                <Link className="hover:text-[#00FFF0] hover:underline hover:underline-offset-8 decoration-gray-200 transition-all ease-in-out duration-200" to="/skill">Skills</Link>
-                <Link className="hover:text-[#00FFF0] hover:underline hover:underline-offset-8 decoration-gray-200 transition-all ease-in-out duration-200" to="/resume">Resume</Link>
-                <Link className="hover:text-[#00FFF0] hover:underline hover:underline-offset-8 decoration-gray-200 transition-all ease-in-out duration-200" to="/chat">Chat</Link>
-            </div>
-
-            {/* Mobile Menu */}
-            <div 
-                className={`md:hidden fixed top-[100px] left-0 w-full bg-[#0F0E1C] transition-all duration-200 ease-in-out transform ${
-                    isMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
-                } z-40 shadow-lg`}
-            >
-                <div className="flex flex-col items-center py-4 space-y-4">
-                    <Link className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent transition-all ease-in-out duration-200 uppercase font-medium tracking-wider w-full text-center py-2" 
-                        to="/"
-                        onClick={() => setIsMenuOpen(false)}
-                        >
-                            Home
-                    </Link>
-                    <Link 
-                        className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent transition-all ease-in-out duration-200 uppercase font-medium tracking-wider w-full text-center py-2"
-                        to="/project"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        Projects
-                    </Link>
-                    <Link 
-                        className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent transition-all ease-in-out duration-200 uppercase font-medium tracking-wider w-full text-center py-2"
-                        to="/skill"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        Skills
-                    </Link>
-                    <Link 
-                        className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent transition-all ease-in-out duration-200 uppercase font-medium tracking-wider w-full text-center py-2"
-                        to="/resume"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        Resume
-                    </Link>
-                    <Link 
-                        className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent transition-all ease-in-out duration-200 uppercase font-medium tracking-wider w-full text-center py-2"
-                        to="/chat"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        Chat
-                    </Link>
-                </div>
-            </div>
-        </nav>
-        <div className="h-[30px] w-full flex justify-center items-center bg-transparent">
-            <p className="flex justify-center items-center bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent font-medium tracking-wider">⇐ Welcome To My Portfolio ⇒</p>
+  return (
+    <nav className="h-[100px] bg-white flex justify-between items-center p-5 select-none relative shadow-md">
+      
+      {/* Left Icon */}
+      <div className="flex items-center gap-4">
+        <div id="icon" className="rounded-2xl">
+          <img src={Icon} alt="logo" className="h-[32px] w-[35px] border-[2px] border-gray-300 rounded-2xl" />
         </div>
-        </>
-    )
+      </div>
+
+      {/* Hamburger Menu Button */}
+      <button
+        onClick={toggleMenu}
+        className="md:hidden text-gray-800 p-2 focus:outline-none z-50 relative hover:scale-110 transition-transform duration-200"
+        aria-label="Toggle menu"
+      >
+        <div className="w-6 h-5 flex flex-col justify-between">
+          <span className={`w-full h-0.5 bg-gray-800 transform transition-all duration-200 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`w-full h-0.5 bg-gray-800 transition-all duration-200 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`w-full h-0.5 bg-gray-800 transform transition-all duration-200 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        </div>
+      </button>
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex text-md font-semibold tracking-wider uppercase gap-10">
+        <Link
+          className="text-black hover:text-gray-700 hover:scale-105 hover:underline hover:underline-offset-2 transition-all duration-200"
+          to="/"
+        >
+          Home
+        </Link>
+
+        {/* Download Resume Button */}
+        <a
+          href="../assets/Resume/Raushan_9142158588.pdf"
+          download="Raushan_Raj_Resume.pdf"
+          className="text-black hover:text-gray-700 hover:scale-105 hover:underline hover:underline-offset-2 transition-all duration-200"
+        >
+          Download Resume
+        </a>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed top-[100px] left-0 w-full bg-white transition-all duration-200 ease-in-out transform ${
+          isMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
+        } z-40 shadow-lg`}
+      >
+        <div className="flex flex-col items-center py-4 space-y-4">
+          <Link
+            className="text-black hover:text-gray-700 hover:scale-105 hover:underline hover:underline-offset-2 transition-all duration-200 uppercase font-medium tracking-wider w-full text-center py-2"
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+
+          <a
+            href="/resume.pdf"
+            download="Raushan_Raj_Resume.pdf"
+            className="text-black hover:text-gray-700 hover:scale-105 hover:underline hover:underline-offset-2 transition-all duration-200 uppercase font-medium tracking-wider w-full text-center py-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 export default Nav;

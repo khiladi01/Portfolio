@@ -1,155 +1,59 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function Skill() {
-  
-  Swal.fire("Welcome To My Skills Page");
-
-  const barsRef = useRef([]);
-  const buttonsRef = useRef([]);
-  const headingRef = useRef(null);
-
-  barsRef.current = [];
-  buttonsRef.current = [];
-
-  const addToBarRefs = (el) => {
-    if (el && !barsRef.current.includes(el)) {
-      barsRef.current.push(el);
-    }
-  };
-
-  const addToButtonRefs = (el) => {
-    if (el && !buttonsRef.current.includes(el)) {
-      buttonsRef.current.push(el);
-    }
-  };
-
-  useEffect(() => {
-    // Animate heading on load
-    gsap.fromTo(
-      headingRef.current,
-      { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
-    );
-
-    // Animate bars on scroll
-    barsRef.current.forEach((bar) => {
-      gsap.fromTo(
-        bar,
-        { x: "-100%", opacity: 0 },
-        {
-          x: "0%",
-          opacity: 1,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: bar,
-            start: "top 90%",
-          },
-        }
-      );
-    });
-
-    // Animate buttons on scroll
-    buttonsRef.current.forEach((btn) => {
-      gsap.fromTo(
-        btn,
-        { x: -100, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: btn,
-            start: "top 95%",
-          },
-        }
-      );
-    });
-  }, []);
 
   const skills = [
-    ["HTML", 395],
-    ["CSS", 395],
-    ["TAILWIND", 350],
-    ["JAVASCRIPT", 300],
-    ["REACT.JS", 250],
-    ["NEXT.JS", 250],
-    ["VITE", 390],
-    ["NODE.JS", 350],
-    ["MONGODB", 300],
-    ["EXPRESS.JS", 250],
-    ["THREE.JS", 250],
-    ["SPLINE 3D", 200],
-    ["GITHUB", 300],
-    ["NETLIFY", 300],
+    "React.js",
+    "Next.js",
+    "JavaScript ES6",
+    "TypeScript",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "Material UI",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "REST APIs",
+    "JWT Authentication",
+    "Role Based Access Control",
+    "React Hooks",
+    "Context API",
+    "Git",
+    "GitHub",
+    "Postman",
+    "Vercel",
+    "Render"
   ];
 
   return (
     <>
-      <div className="min-h-screen bg-transparent px-4 py-6 select-none">
+      <div className="min-h-screen bg-white px-6 md:px-20 py-20">
+
         {/* Heading */}
-        <div className="w-full h-[100px] flex justify-center items-center">
-          <p
-            ref={headingRef}
-            className="uppercase text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-          >
-            skills
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            My Skills
+          </h1>
+          <p className="text-gray-600 mt-4">
+            Technologies and tools I work with
           </p>
         </div>
 
-        {/* Skill Bars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 max-w-6xl mx-auto">
-          {skills.map(([label, width], index) => (
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+
+          {skills.map((skill, index) => (
             <div
               key={index}
-              className="w-full flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4"
+              className="bg-gray-50 border border-gray-200 rounded-lg py-4 text-center font-medium text-gray-800 pointer-events-none"
             >
-              <p className="uppercase text-lg font-medium text-cyan-400 w-[100px] text-center sm:text-left">
-                {label}
-              </p>
-              <div className="w-full max-w-[400px] h-[10px] rounded-xl bg-rose-50 overflow-hidden">
-                <div
-                  ref={addToBarRefs}
-                  className="h-full rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"
-                  style={{ width: `${width}px` }}
-                ></div>
-              </div>
+              {skill}
             </div>
           ))}
-        </div>
-      </div>
 
-      {/* Buttons */}
-      <div className="h-auto w-full flex flex-col sm:flex-row justify-center items-center gap-5 px-4 py-4">
-        <div
-          ref={addToButtonRefs}
-          className="w-[200px] h-[50px] border-[2px] border-cyan-500 rounded-full hover:shadow-[0_0_15px_#00FFF0] transition-all ease-in-out duration-200"
-        >
-          <Link
-            className="w-full h-full flex justify-center items-center uppercase text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-            to="/project"
-          >
-            ⇚ back
-          </Link>
         </div>
-        <div
-          ref={addToButtonRefs}
-          className="w-[200px] h-[50px] border-[2px] border-cyan-500 rounded-full hover:shadow-[0_0_15px_#00FFF0] transition-all ease-in-out duration-200"
-        >
-          <Link
-            className="w-full h-full flex justify-center items-center uppercase text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-            to="/resume"
-          >
-            next ⇛
-          </Link>
-        </div>
+
       </div>
     </>
   );

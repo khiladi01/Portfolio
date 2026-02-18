@@ -18,7 +18,7 @@ function Nav() {
         <img
           src={Icon}
           alt="logo"
-          className="h-32 w-35 rounded-xl transition-opacity duration-200 hover:opacity-80"
+          className="h-20 w-20 rounded-xl transition-opacity duration-200 hover:opacity-80"
         />
       </div>
 

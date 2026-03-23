@@ -11,14 +11,14 @@ function Nav() {
   };
 
   return (
-    <nav className="h-32 bg-white flex justify-between items-center px-6 md:px-10 select-none relative shadow-sm">
+    <nav className="h-20 bg-white flex justify-between items-center px-6 md:px-10 select-none relative shadow-sm">
       
       {/* Logo */}
       <div className="flex items-center">
         <img
           src={Icon}
           alt="logo"
-          className="h-20 w-20 rounded-xl transition-opacity duration-200 hover:opacity-80"
+          className="h-10 w-10 rounded-xl transition-opacity duration-200 hover:opacity-80"
         />
       </div>
 

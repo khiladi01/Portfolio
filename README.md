@@ -1,29 +1,55 @@
-# 🚀 RAUSHAN PORTFOLIO – Futuristic Portfolio Website
+# RAUSHAN PORTFOLIO
 
-Welcome to **RAUSHAN PORTFOLIO** – a sleek, glowing, and immersive portfolio website crafted by **Raushan Raj**, a frontend + 3D web developer who builds responsive, modern UIs with a blend of aesthetics and performance.
+Welcome to **Raushan Portfolio** – a modern, responsive portfolio website built by **Raushan Raj**, a Full Stack Developer focused on building scalable web applications with clean UI, solid logic, and production-ready deployments.
 
-![Preview] ( https://khiladi01.github.io/Portfolio-Project/ )
+This portfolio showcases my frontend and full-stack projects with live demos and source code, allowing recruiters and developers to evaluate my skills in UI development, backend logic, and deployment practices.
+
+---
+
+## 🔗 Live Preview
+
+👉 https://khiladi01.github.io/Portfolio-Project/
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, Tailwind CSS, JavaScript
-- **Frameworks:** React.js, Next.js
-- **Backend (Minimal):** Node.js
-- **3D & Animation:** Three.js, Spline
-- **Deployment:** GitHub Pages
+- **Frontend:** HTML, CSS, JavaScript  
+- **Frameworks:** React.js , Tailwind CSS
+- **Backend (Basic):** Node.js  
+- **Deployment:**: Vercel  
 
 ---
 
 ## 💡 Features
 
-- 🔗 Sticky Navbar with smooth scroll and active glow
-- 🏠 Hero section with futuristic font and 3D model
-- 🎯 Responsive design for all screen sizes
-- 🛸 Projects page (coming soon) to showcase work dynamically
-- 📞 Functional Contact Form UI
-- 🌌 Neon-cyber style inspired by sci-fi interfaces
+- Responsive and modern UI for all devices  
+- Smooth navigation with clean user experience  
+- Projects section showcasing real-world applications  
+- Live project links with GitHub repositories  
+- Contact section for professional inquiries  
+- Optimized for performance and fast loading  
+
+---
+
+## 🚀 Projects Showcase
+
+This portfolio includes projects ranging from frontend UI clones to full-stack applications. Each project includes:
+
+- Live Demo Link  
+- GitHub Repository  
+- Tech Stack Used  
+- Core Features & Functionality  
+
+---
+
+## 📞 Contact
+
+If you're a recruiter or developer looking to connect:
+
+- 📧 Email: raushanraj.tech.ai@gmail.com 
+- 📍 Location: Bangalore, Karnataka, India  
+- 💼 Open to Full Stack Developer opportunities  
 
 ---
 
@@ -33,7 +59,7 @@ Welcome to **RAUSHAN PORTFOLIO** – a sleek, glowing, and immersive portfolio w
 src/
 │
 ├── assets/         # Images, icons, and media
-├── components/     # Navbar, Footer, Buttons, Cards
+├── components/     # Reusable UI components (Navbar, Footer, Cards)
 ├── pages/          # Home, About, Projects, Contact
 ├── App.jsx
 └── main.jsx

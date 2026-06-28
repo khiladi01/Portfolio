@@ -1,7 +1,11 @@
 import "../style/Edit.css";
 import Icon from "../assets/favicon/Icon.png";
+import resume from "../assets/Resume/Raushan_Raj_9142158588.pdf";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+
+// use imported asset so Vite handles cache-busting and updated files
+// (prevents downloading an outdated copy from the public folder)
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,8 +61,8 @@ function Nav() {
         </Link>
 
         <a
-          href="/Resume/Raushan_Raj_9142158588.pdf"
-          download="Raushan_Raj_Resume.pdf"
+          href={resume}
+          download="Raushan_Raj_9142158588.pdf"
           className="text-black hover:text-gray-600 transition-colors duration-200"
         >
           Download Resume
@@ -83,8 +87,8 @@ function Nav() {
           </Link>
 
           <a
-            href="/public/Resume/Raushan_Raj_9142158588.pdf"
-            download="Raushan_Raj_Resume.pdf"
+            href={resume}
+            download="Raushan_Raj_9142158588.pdf"
             onClick={() => setIsMenuOpen(false)}
             className="text-black hover:text-gray-600 transition-colors duration-200 uppercase font-medium tracking-wide w-full text-center py-2"
           >

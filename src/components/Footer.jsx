@@ -8,11 +8,11 @@ function Footer() {
         </h2>
 
         <p className="mt-2 text-[14px] text-gray-700 max-w-md">
-          Real world ideas crafted in code and built for performance.
+           Designing and developing modern full-stack web solutions.
         </p>
 
         <p className="mt-4 text-sm text-gray-600">
-          {new Date().getFullYear()} Raushan Raj. All rights reserved.
+          {new Date().getFullYear()} All rights reserved.
         </p>
 
       </div>

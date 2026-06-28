@@ -26,7 +26,7 @@ function Chat() {
             <FontAwesomeIcon icon={faWhatsapp} className="text-2xl text-green-600" />
             <a
               href="https://wa.me/919142158588"
-              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-green-600 hover:underline"
+              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-green-600 "
             >
               +91 9142158588
             </a>
@@ -37,7 +37,7 @@ function Chat() {
             <FontAwesomeIcon icon={faPhone} className="text-2xl text-blue-600" />
             <a
               href="tel:9142158588"
-              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-blue-600 hover:underline"
+              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-blue-600 "
             >
               +91 9142158588
             </a>
@@ -48,7 +48,7 @@ function Chat() {
             <FontAwesomeIcon icon={faEnvelope} className="text-2xl text-red-500" />
             <a
               href="mailto:raushanraj.tech.ai@gmail.com"
-              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-red-500 hover:underline"
+              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-red-500 "
             >
               raushanraj.tech.ai@gmail.com
             </a>
@@ -61,7 +61,7 @@ function Chat() {
               href="https://www.linkedin.com/in/raushanrajdeveloper"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-blue-700 hover:underline"
+              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-blue-700 "
             >
               LinkedIn Profile
             </a>
@@ -74,7 +74,7 @@ function Chat() {
               href="https://github.com/khiladi01"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-black hover:underline"
+              className="text-lg text-gray-800 font-medium transition duration-300 hover:text-black "
             >
               GitHub Profile
             </a>

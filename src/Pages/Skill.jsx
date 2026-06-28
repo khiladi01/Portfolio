@@ -3,27 +3,24 @@ import { Link } from "react-router-dom";
 function Skill() {
 
   const skills = [
-    "React.js",
-    "Next.js",
     "JavaScript ES6",
     "TypeScript",
+    "React.js",
+    "Next.js",
     "HTML5",
     "CSS3",
     "Tailwind CSS",
     "Material UI",
     "Node.js",
     "Express.js",
+    "Nest.js",
     "MongoDB",
+    "PostgreSQL",
     "REST APIs",
     "JWT Authentication",
     "Role Based Access Control",
-    "React Hooks",
-    "Context API",
-    "Git",
     "GitHub",
     "Postman",
-    "Vercel",
-    "Render"
   ];
 
   return (

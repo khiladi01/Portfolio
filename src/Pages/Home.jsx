@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "boxicons/css/boxicons.min.css";
 import "../style/Edit.css";
 import Model from "../components/Model.jsx";
@@ -30,24 +31,35 @@ function Home() {
 
   return (
     <>
-      {/* HERO SECTION */}
-      <div className="min-h-screen bg-white flex flex-col lg:flex-row justify-between items-start px-8 md:px-20 pt-8 pb-8 gap-16">
-        {/* LEFT SIDE - INTRO */}
+  <motion.div
+  initial={{ opacity: 0, y: 60, scale: 0.95 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{
+    duration: 0.5,
+    ease: [0.25, 1, 0.5, 1] // smooth cubic bezier
+  }}
+  className="min-h-screen bg-white flex flex-col lg:flex-row justify-between items-start px-8 md:px-20 pt-8 pb-8 gap-16"
+  >
+  {/* LEFT SIDE - INTRO */}
         <div className="flex-1 space-y-6 fade-in opacity-0 translate-y-10 transition-all duration-700">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Hi, I am Raushan Raj
           </h1>
 
           <p className="text-lg text-gray-600 max-w-lg">
-            I love creating websites that people can easily use and enjoy. I
-            like solving problems and building things that actually help others
-            while learning and improving every day.
+            I am a Full Stack Developer currently working at SR Integrated Circuit India 
+            Pvt. Ltd., where I build and ship scalable web applications. I work with 
+            React.js, Node.js, Nest.js, and PostgreSQL, and have built production features 
+            like role-based access control, payment integrations with Stripe and Razorpay, 
+            and wallet management systems. I also have experience with API integration, 
+            Postman, GitHub, Python, Selenium, and automation testing. I care about writing 
+            clean code and building products that are reliable and easy to use.
           </p>
 
           <p className="text-lg text-gray-600 max-w-lg">
-            I consistently build real world projects to improve architecture,
-            user experience, and code quality aiming to grow into a strong full
-            stack engineer.
+            I am currently working on real world applications using the latest technologies 
+            to enhance my development skills and deepen my understanding of modern 
+            full stack architecture, user experience, and code quality.
           </p>
 
           <Link
@@ -64,14 +76,14 @@ function Home() {
           <div className="relative group w-full max-w-md h-[450px] flex justify-center items-center">
             {/* Hover Message */}
             <div className="absolute -top-8 bg-black text-white text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 shadow-md">
-              Hi 👋 I'm Robo Welcome To My Portfolio
+              Hi 👋 I'm Raushan Raj
             </div>
 
             {/* Robot Model */}
             <Model />
           </div>
         </div>
-      </div>
+</motion.div>
 
       {/* PROJECTS SECTION */}
       <Project />
